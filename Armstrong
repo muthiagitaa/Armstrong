@@ -1,0 +1,43 @@
+#include <iostream>
+#include <conio.h>
+#include <stdio.h>
+
+using namespace std;
+
+int main()
+{
+    int n=0;
+    void cekArmstrong (int x);
+
+    cout << "Masukkan 3 digit bilangan Armstrong : ";
+    cin >> n;
+    cekArmstrong (n);
+
+    return 0;
+}
+
+ void cekArmstrong (int x) {
+        int ratusan, puluhan, satuan, arm;
+
+        if(x >= 1000) {
+            cout<<"Angka diluar jangkauan!";
+        }else{
+            ratusan = x/100;
+            puluhan =(x- ratusan*100)/10;
+            satuan =(x-ratusan*100-puluhan*10);
+        }
+
+        for (ratusan=1;ratusan<10;ratusan++){
+            for (puluhan=0;puluhan<10;puluhan++) {
+                for (satuan=0;satuan<10;satuan++){
+
+        arm = ((ratusan*ratusan*ratusan)+(puluhan*puluhan*puluhan)+(satuan*satuan*satuan));
+        if (x==arm){
+            cout << x<<" adalah bilangan Armstrong :)";
+        }else{
+            cout << x<<" bukan bilangan Armstrong";
+        }
+                }
+            }
+        }
+    }
