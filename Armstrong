@@ -27,17 +27,5 @@ int main()
             satuan =(x-ratusan*100-puluhan*10);
         }
 
-        for (ratusan=1;ratusan<10;ratusan++){
-            for (puluhan=0;puluhan<10;puluhan++) {
-                for (satuan=0;satuan<10;satuan++){
-
-        arm = ((ratusan*ratusan*ratusan)+(puluhan*puluhan*puluhan)+(satuan*satuan*satuan));
-        if (x==arm){
-            cout << x<<" adalah bilangan Armstrong :)";
-        }else{
-            cout << x<<" bukan bilangan Armstrong";
-        }
-                }
-            }
-        }
+    cout << x << " = " << ratusan<<"3"<<" + "<<puluhan<<"3"<<" + "<<satuan<<"3"<" + "<<" ("<<ratusan<<" ^ 3+"<<puluhan<<" ^3+"<<satuan<<" ^3+";
     }
